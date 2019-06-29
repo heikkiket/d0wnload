@@ -1,0 +1,12 @@
+{
+	"authors": [
+		"Heikki Ketoharju"
+	],
+	"copyright": "Copyright © 2019, Heikki Ketoharju",
+	"dependencies": {
+		"gtk-d": "~>3.9.0"
+	},
+	"description": "A minimal downloader app",
+	"license": "GPL",
+	"name": "download"
+}
