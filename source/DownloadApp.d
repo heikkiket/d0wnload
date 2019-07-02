@@ -8,6 +8,7 @@ import gtk.ApplicationWindow;
 import gtk.Application;
 import gio.Application: GioApplication = Application;
 import gtk.Button;
+import gtk.Entry;
 
 
 import Controller;
@@ -39,7 +40,9 @@ class DownloadApp : Application {
     if( window !is null) {
       window.setApplication(this);
       auto button = cast(Button) ui.getObject("downloadButton");
-      button.addOnClicked(delegate void (Button b){ controller.handleDlButton(); });
+      auto entry = cast(Entry) ui.getObject("urlField");
+      writeln(entry);
+      button.addOnClicked(delegate void (Button b){ controller.handleDlButton(entry); });
       window.showAll();
     } else {
       writeln("Could not load Window");
